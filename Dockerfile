@@ -1,6 +1,8 @@
 # Use an official Node.js runtime as a parent image
 FROM node:20-alpine AS build
 
+RUN apk update && apk upgrade --no-cache
+
 # Set the working directory
 WORKDIR /app
 
@@ -18,6 +20,8 @@ RUN npm run build
 
 # Use an official Nginx image to serve the built application
 FROM nginx:alpine
+
+RUN apk update && apk upgrade --no-cache
 
 RUN mkdir -p /usr/share/nginx/html/logs
 

@@ -184,7 +184,6 @@ function App() {
     <div
       style={{
         width: "100%",
-        padding: "5px",
         verticalAlign: "top",
         overflow: "hidden",
       }}
@@ -238,16 +237,9 @@ function App() {
             columns={columns}
             size="small"
             style={{ width: "100%" }}
-            pagination={{ pageSize: 16 }}
+            pagination={{ defaultPageSize: 20 }}
           />
-          <div
-            style={{
-              position: "absolute",
-              bottom: "0",
-              right: "0",
-              padding: "10px",
-            }}
-          >
+          <div style={{ textAlign: "right", padding: "10px", color: "#888" }}>
             <span
               title={
                 "href->" +
@@ -260,7 +252,7 @@ function App() {
                 token
               }
             >
-              v0.9
+              v1.3
             </span>
           </div>
         </>
